@@ -20,7 +20,7 @@ function handleSymbol(symbol) {
 			runningTotal = 0;
 			break;
 		case '=': 
-			if(previousOperator === null) {
+			if(previousOperator === undefined) {
 				return;
 			} 
 			flushOperation(parseInt(buffer));
@@ -32,7 +32,7 @@ function handleSymbol(symbol) {
 			if(buffer.length === 1) {
 				buffer = '0';
 			} else {
-				buffer = buffer.toString(0, buffer.length - 1);
+				buffer = buffer.substring(0, buffer.length - 1);
 			}
 			break;
 		case '+':
@@ -44,7 +44,7 @@ function handleSymbol(symbol) {
 	}
 }
 
-function handleMath(sybol) {
+function handleMath(symbol) {
 	if(buffer === '0') {
 		return;
 	} 
@@ -74,7 +74,7 @@ function flushOperation(intBuffer) {
 
 function handleNumber(numberString) {
 	if(buffer === "0") {
-		buffer= numberString;
+		buffer = numberString;
 	} else {
 		buffer += numberString
 	}
