@@ -14,11 +14,11 @@ html {
 body {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
 	font-family: 'Doris', sans-serif;
 	font-display: swap;
 	height: inherit;
-	justify-content: center;
 }
 
 .wrapper {
@@ -29,7 +29,6 @@ body {
 	-webkit-backdrop-filter: blur(4px);
 	background: rgba(255, 255, 255, 0.3);
 	border: 1px solid rgba(red, green, blue, 0.34);
-	flex-basis: 400px;
 	height: 540px;
 	padding: 20px 35px;
 }
